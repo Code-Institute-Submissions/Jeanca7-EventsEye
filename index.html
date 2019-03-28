@@ -11,12 +11,22 @@
 </head>
 
 <body>
-  <div class="container">
-  <div class="row">
-  <div class="col">
-      <div class="row justify-content-center">
-    <select id="CountrySelect" onchange="obtainCountry()">
-    <option value="">Please select a country</option>
+  
+      
+<div class="container-fluid back-img">      
+      
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xs-7 col-md-12">
+                <form class="form-inline">
+            
+    <div class="input-group mx-auto my-2">
+    <div class="input-group-prepend">
+    <label class="input-group-text" for="CountrySelect">Please select a country</label>
+    </div>
+        
+    <select id="CountrySelect" onchange="obtainCountry()" class="custom-select">
+    <option value="">Choose...</option>
     <option value="US">USA</option>
     <option value="AU">Australia</option>
     <option value="AT">Austria</option>
@@ -35,22 +45,56 @@
     <option value="SE">Sweden</option>
     <option value="CH">Switzerland</option>
 </select>
-    
-    
-
-<select id="citySelect" onchange = "refreshCities()">
-    <option value="">please select a city</option>  
-</select>
+</div>
     
 
-<select id="genreSelect" onchange="refreshGenres()">
-    <option value="">please select a genre</option>  
+<div class="input-group mx-auto my-2">
+<div class="input-group-prepend">
+    <label class="input-group-text" for="citySelect">Please select a city</label>
+    </div>
+<select id="citySelect" onchange = "refreshCities()" class="custom-select">
+    <option value="">Choose...</option>  
 </select>
 </div>
+
+
+<div class="input-group mx-auto my-2">
+<div class="input-group-prepend">
+    <label class="input-group-text" for="genreSelect">Please select a genre</label>
+    </div>
+<select id="genreSelect" onchange="refreshGenres()" class="custom-select">
+    <option value="">Choose...</option>  
+</select>
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+  <div class="col">
 
 <div class="row justify-content-center">
 <div id="concertData"> <!--I display the main content here this id of the div is used in displayNicely()-->
 </div>
+</div>
+
+<div class="row justify-content-center">
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">"Never, ever understimate the importance of having fun."</p>
+        <footer class="blockquote-footer">Randy Pausch.</footer>
+    </blockquote>
 </div>
       </div>
       </div>

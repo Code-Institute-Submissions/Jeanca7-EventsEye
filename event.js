@@ -101,7 +101,7 @@ function displayNicely(apiData, country, city, genre) {
 
 
                 if (typeof(apiData._embedded.events[i].images) !== "undefined") {
-                    htmlString += "<img src= " + apiData._embedded.events[i].images[0].url + "> <br />"; //artist image***    
+                    htmlString += "<img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image'> <br />"; //artist image***    
                 }
 
 
