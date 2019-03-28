@@ -101,7 +101,7 @@ function displayNicely(apiData, country, city, genre) {
 
 
                 if (typeof(apiData._embedded.events[i].images) !== "undefined") {
-                    htmlString += "<img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image rounded'> <br />"; //artist image***    
+                    htmlString += "<div class='row justify-content-center'><img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image rounded'> </div>"; //artist image***    
                 }
 
 
@@ -201,7 +201,7 @@ function displayNicely(apiData, country, city, genre) {
 
                 if (typeof(apiData["_embedded"].events[i]["_embedded"].venues[0].images) !== "undefined") { //we add the venue images***
 
-                    htmlString += "<h3>VENUE: </h3>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img'> <br />";
+                    htmlString += "<h3>VENUE: </h3>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img'><br />";
                 }
 
 
