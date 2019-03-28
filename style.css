@@ -21,4 +21,54 @@
                 width: 300px;
                 height: 300px;
         }
+        
+        .quote{
+                margin-top: 70px;
+                margin-bottom: 15px;
+        }
+        
+        .blockquote p{
+                font-size: 40px;
+        }
+
+        .blockquote-footer{
+                font-size: 30px;
+        }
 }
+
+
+@media(min-width: 501px){
+        .quote{
+                margin-top: 100px;
+                margin-bottom: 15px;
+        }
+        
+        .blockquote p{
+        font-size: 90px;
+        }
+
+        .blockquote-footer{
+                font-size: 50px;
+        }
+}
+
+.quote{
+        font-family: 'Kaushan Script', cursive;
+        font-size: 77px;
+}
+
+body{
+        font-family: 'Overlock', cursive;
+}
+
+.input-group-text {
+        background-color: #ff1a1a;
+        border: 1px solid #ced4da;
+        border-radius: .50rem;
+        color: white;
+}
+
+.custom-select {
+        border-radius: .50rem;
+}
+
