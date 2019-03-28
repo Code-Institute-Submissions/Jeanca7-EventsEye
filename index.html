@@ -7,12 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <title>api project</title>
+    <title>EventsEye</title>
 </head>
 
 <body>
-  
-<select id="CountrySelect" onchange="obtainCountry()">
+  <div class="container">
+  <div class="row">
+  <div class="col">
+      <div class="row justify-content-center">
+    <select id="CountrySelect" onchange="obtainCountry()">
     <option value="">Please select a country</option>
     <option value="US">USA</option>
     <option value="AU">Australia</option>
@@ -32,33 +35,27 @@
     <option value="SE">Sweden</option>
     <option value="CH">Switzerland</option>
 </select>
+    
+    
 
 <select id="citySelect" onchange = "refreshCities()">
     <option value="">please select a city</option>  
 </select>
-
+    
 
 <select id="genreSelect" onchange="refreshGenres()">
     <option value="">please select a genre</option>  
 </select>
+</div>
 
-
-<br />
-
-<!--<button id="submit" onclick="obtainCountry()">OK</button>-->
-
+<div class="row justify-content-center">
 <div id="concertData"> <!--I display the main content here this id of the div is used in displayNicely()-->
-    
-    <!--<h3>Location of the event on Google Maps</h3>-->
-    <!--The div element for the map -->
-    <!--<div id="map"></div>-->
-</div> 
-
-
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDewUm-cIskvwjzie8VzAYkfX99lO_hTF8&callback=initMap">
-    </script>
-
+</div>
+</div>
+      </div>
+      </div>
+      </div>
+  
     <script type="text/javascript" src="event.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -66,5 +63,3 @@
 </body>
 
 </html>
-
-

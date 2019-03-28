@@ -82,20 +82,14 @@ function populateGenre(apiData) {
     displayNicely(apiData, country, city, genre);
 }
 
-/*
-function displayNicely(apiData, country, city, genre) {
-    loops through apiData and only displays for the selected country, city and genre.
-}
-*/
 
-//we create our variable country from the selected country in our select
-
+// function displayNicely loops through the apiData and only displays for the selected country, city and genre.
 
 function displayNicely(apiData, country, city, genre) {
 
     console.log(apiData); //we can see the data in the console
 
-    let htmlString;
+    let htmlString; //String used to display api text information in the HTML elements
 
     for (let i = 0; i < apiData._embedded.events.length; i++) {
 
@@ -210,34 +204,6 @@ function displayNicely(apiData, country, city, genre) {
 
                     htmlString += "Venue Place: <br />" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + "> <br />";
                 }
-
-
-               
-               //in this for loop 
-                // if (typeof(apiData._embedded.events[i]._embedded.venues[0].location) !== "undefined") {
-                // htmlString += "<div id='map" + i + "'></div>"; 
-                //     // Initialize and add the map
-                //     function initMap() {
-                //         // The location of Uluru
-
-                //         let lat = apiData._embedded.events[i]._embedded.venues[0].location.latitude;
-                //         let lng = apiData._embedded.events[i]._embedded.venues[0].location.longitude;
-
-
-                //         var location = { lat: lat, lng: lng };
-
-                //         // // The map, centered at Uluru
-
-                //         var map = new google.maps.Map(
-                //             document.getElementById('map' + i), { zoom: 4, center: location });  document.append, have a 
-
-                //         // The marker, positioned at Uluru
-                //         var marker = new google.maps.Marker({ position: location, map: map });
-                //     } 
-                //     initMap();
-                //     // htmlString += apiData._embedded.events[i]._embedded.venues[0].location.latitude: "40.81359";      LOCATION DETAILS
-                //     // htmlString += apiData._embedded.events[i]._embedded.venues[0].location.longitude: "-74.074493";   LOCATION DETAILS
-                // }
 
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].parkingDetail) !== "undefined") {
