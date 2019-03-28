@@ -1,6 +1,7 @@
 .artist-image{
-        height: 100px;
-        width: 100px;
+        height: 300px;
+        width: 300px;
+        margin-bottom: 1rem;
 }
 
 .back-img{
@@ -34,6 +35,20 @@
         .blockquote-footer{
                 font-size: 30px;
         }
+        
+        .seat-map{
+                width: 300px;
+                height: 300px;
+        }
+        
+        .venue-img{
+                width: 300px;
+                height: 300px;
+        }
+        
+        .artist-image{
+                justify-content: center!important;
+        }
 }
 
 
@@ -50,11 +65,20 @@
         .blockquote-footer{
                 font-size: 50px;
         }
+        
+        .seat-map{
+                width: 670px;
+                height: 450px;
+        }
+        
+        .venue-img{
+                width: 450px;
+                height: 450px;
+        }
 }
 
 .quote{
         font-family: 'Kaushan Script', cursive;
-        font-size: 77px;
 }
 
 body{
@@ -72,3 +96,35 @@ body{
         border-radius: .50rem;
 }
 
+h1{
+        color: #ff1a1a;
+        margin-bottom: 1.5rem;
+}
+
+.seat-map{
+        margin-bottom: 1rem;
+}
+
+.venue-img{
+        margin-bottom: 1rem;
+}
+
+#concertData p{
+        font-size: 20px;
+        color: #8c8c8c;
+}
+
+hr{
+        border-width: 3px;
+        border-color: #999999; 
+        margin-bottom: 3rem;
+}
+
+h4{
+        display: inline;
+}
+
+strong{
+        font-family: 'Contrail One', cursive;
+        color: black;
+}

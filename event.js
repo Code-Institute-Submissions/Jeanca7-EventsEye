@@ -87,141 +87,138 @@ function populateGenre(apiData) {
 
 function displayNicely(apiData, country, city, genre) {
 
-    console.log(apiData); //we can see the data in the console
+    console.log(apiData); //To display the data in the console
 
-    let htmlString; //String used to display api text information in the HTML elements
+    let htmlString="EventsEye™"; //String used to display api text information in the main HTML element
 
     for (let i = 0; i < apiData._embedded.events.length; i++) {
 
         if (apiData._embedded.events[i]._embedded.venues[0].city.name == city) {
             if (apiData._embedded.events[i].classifications[0].segment.name == genre) {
                 if (typeof(apiData._embedded.events[i].name) !== "undefined") {
-                    htmlString += apiData._embedded.events[i].name + "<br />";
+                    htmlString += "<h1>" + apiData._embedded.events[i].name + "</h1>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].images) !== "undefined") {
-                    htmlString += "<img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image'> <br />"; //artist image***    
+                    htmlString += "<img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image rounded'> <br />"; //artist image***    
                 }
 
 
                 if (typeof(apiData._embedded.events[i].classifications[0].segment.name) !== "undefined") {
-                    htmlString += "Segment: " + apiData._embedded.events[i].classifications[0].segment.name + "<br />";
+                    htmlString += "<p><strong>SEGMENT: </strong> " + apiData._embedded.events[i].classifications[0].segment.name + "</p>";
                 }
 
                 if (typeof(apiData._embedded.events[i].classifications[0].genre.name) !== "undefined") {
-                    htmlString += "Genre: " + apiData._embedded.events[i].classifications[0].genre.name + "<br />";
+                    htmlString += "<p><strong>GENRE: </strong>" + apiData._embedded.events[i].classifications[0].genre.name + "</p>";
                 }
 
                 if (typeof(apiData._embedded.events[i].classifications[0].subGenre.name) !== "undefined") {
-                    htmlString += "Subgenre: " + apiData._embedded.events[i].classifications[0].subGenre.name + "<br />";
+                    htmlString += "<p><strong>SUBGENRE: </strong>" + apiData._embedded.events[i].classifications[0].subGenre.name + "</p>";
                 }
 
 
                 if (typeof(apiData["_embedded"].events[i].classifications[0].type) !== "undefined") {
                     if (apiData["_embedded"].events[i].classifications[0].type.name !== "Undefined") {
-                        htmlString += "Type: " + apiData._embedded.events[i].classifications[0].type.name + "<br />";
+                        htmlString += "<p><strong>TYPE: </strong>" + apiData._embedded.events[i].classifications[0].type.name + "</p>";
                     }
                 }
 
                 if (typeof(apiData._embedded.events[i].sales.public.startDateTime) !== "undefined") {
-                    htmlString += "Start Date Time: " + apiData._embedded.events[i].sales.public.startDateTime + "<br />";
+                    htmlString += "<p><strong>START DATE TIME: </strong>" + apiData._embedded.events[i].sales.public.startDateTime + "</p>";
                 }
 
                 if (typeof(apiData._embedded.events[i].sales.public.endDateTime) !== "undefined") {
-                    htmlString += "End Date Time: " + apiData._embedded.events[i].sales.public.endDateTime + "<br />";
+                    htmlString += "<p><strong>END DATE TIME: </strong>" + apiData._embedded.events[i].sales.public.endDateTime + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].dates.timezone) !== "undefined") {
-                    htmlString += "Timezone: " + apiData._embedded.events[i].dates.timezone + "<br />";
+                    htmlString += "<p><strong>TIMEZONE: </strong>" + apiData._embedded.events[i].dates.timezone + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].dates.status.code) !== "undefined") {
-                    htmlString += "Status: " + apiData._embedded.events[i].dates.status.code + "<br />";
+                    htmlString += "<p><strong>STATUS: </strong>" + apiData._embedded.events[i].dates.status.code + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].info) !== "undefined") {
-                    htmlString += "Information: " + apiData._embedded.events[i].info + "<br />";
+                    htmlString += "<p><strong>INFORMATION: </strong>" + apiData._embedded.events[i].info + "</p>";
                 }
 
                 if (typeof(apiData._embedded.events[i].pleaseNote) !== "undefined") {
-                    htmlString += "Please Note: " + apiData._embedded.events[i].pleaseNote + "<br />";
+                    htmlString += "<p><strong>PLEASE NOTE: </strong>" + apiData._embedded.events[i].pleaseNote + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].priceRanges) !== "undefined") {
 
-                    htmlString += "Price Type: " + apiData._embedded.events[i].priceRanges[0].type + "<br />";
-                    htmlString += "Currency: " + apiData._embedded.events[i].priceRanges[0].currency + "<br />";
-                    htmlString += "Price range: " + apiData._embedded.events[i].priceRanges[0].max + " - ";
-                    htmlString += apiData._embedded.events[i].priceRanges[0].min + "<br />";
+                    htmlString += "<p><strong>PRICE TYPE: </strong>" + apiData._embedded.events[i].priceRanges[0].type + "</p>";
+                    htmlString += "<p><strong>CURRENCY: </strong>" + apiData._embedded.events[i].priceRanges[0].currency + "</p>";
+                    htmlString += "<p><strong>PRICE RANGE: </strong>" + apiData._embedded.events[i].priceRanges[0].min + " - ";
+                    htmlString += apiData._embedded.events[i].priceRanges[0].max + "</p>";
                 }
 
-
                 if (typeof(apiData._embedded.events[i].ticketLimit) !== "undefined") {
-                    htmlString += "Ticket Limit Information: " + apiData._embedded.events[i].ticketLimit.info + "<br />";
+                    htmlString += "<p><strong>TICKET LIMIT INFORMATION: </strong>" + apiData._embedded.events[i].ticketLimit.info + "</p>";
                 }
 
 
 
                 if (typeof(apiData._embedded.events[i].products) !== "undefined") {
-                    htmlString += "Product Type: " + apiData._embedded.events[i].products[0].type + "<br />";
+                    htmlString += "<p><strong>PRODUCT TYPE: </strong>" + apiData._embedded.events[i].products[0].type + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].seatmap) !== "undefined") {
-                    htmlString += "Seatmap <br />" + "<img src = " + apiData._embedded.events[i].seatmap.staticUrl + "><br />"; //WE ADD THE IMAGE DEPENDING ON EACH EVENT*******
+                    htmlString += "<h3>SEATMAP</h3>" + "<img src = " + apiData._embedded.events[i].seatmap.staticUrl + " class='seat-map'><br />"; //ADD THE IMAGE DEPENDING ON EACH EVENT*******
                 }
 
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].city.name) !== "undefined") {
-                    htmlString += "City: " + apiData._embedded.events[i]._embedded.venues[0].city.name + "<br />"; //CITY*****
+                    htmlString += "<p><strong>CITY: </strong>" + apiData._embedded.events[i]._embedded.venues[0].city.name + "</p>"; //CITY***
                 }
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].country.name) !== "undefined") {
-                    htmlString += "Country: " + apiData._embedded.events[i]._embedded.venues[0].country.name + "<br />";
+                    htmlString += "<p><strong>COUNTRY: </strong>" + apiData._embedded.events[i]._embedded.venues[0].country.name + "</p>";
                 }
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].country.countryCode) !== "undefined") {
-                    htmlString += "Country Code: " + apiData._embedded.events[i]._embedded.venues[0].country.countryCode + "<br />";
+                    htmlString += "<p><strong>COUNTRY CODE: </strong>" + apiData._embedded.events[i]._embedded.venues[0].country.countryCode + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].address.line1) !== "undefined") {
-                    htmlString += "Venue's Address: " + apiData._embedded.events[i]._embedded.venues[0].address.line1 + "<br />";
+                    htmlString += "<p><strong>VENUE'S ADDRESS: </strong>" + apiData._embedded.events[i]._embedded.venues[0].address.line1 + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].generalInfo) !== "undefined") {
-                    htmlString += "Child Information: " + apiData._embedded.events[i]._embedded.venues[0].generalInfo.childRule + "<br />";
-                    htmlString += "General Information: " + apiData._embedded.events[i]._embedded.venues[0].generalInfo.generalRule + "<br />";
+                    htmlString += "<p><strong>CHILD INFORMATION: </strong>" + apiData._embedded.events[i]._embedded.venues[0].generalInfo.childRule + "</p>";
+                    htmlString += "<p><strong>GENERAL INFORMATION: </strong>" + apiData._embedded.events[i]._embedded.venues[0].generalInfo.generalRule + "</p>";
                 }
 
-                if (typeof(apiData["_embedded"].events[i]["_embedded"].venues[0].images) !== "undefined") { //we add the images*****
+                if (typeof(apiData["_embedded"].events[i]["_embedded"].venues[0].images) !== "undefined") { //we add the venue images***
 
-                    htmlString += "Venue Place: <br />" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + "> <br />";
+                    htmlString += "<h3>VENUE: </h3>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img'> <br />";
                 }
 
 
                 if (typeof(apiData._embedded.events[i]._embedded.venues[0].parkingDetail) !== "undefined") {
-                    htmlString += "Parking Details: " + apiData._embedded.events[i]._embedded.venues[0].parkingDetail + "<br />";
+                    htmlString += "<p><strong>PARKING DETAILS: </strong>" + apiData._embedded.events[i]._embedded.venues[0].parkingDetail + "</p>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].url) !== "undefined") {
-                    htmlString += "Buy your tickets here: " + "<a href=" + apiData._embedded.events[i].url + ">Click here</a>";
+                    htmlString += "<p><strong>BUY YOUR TICKETS HERE: </strong>" + "<a href=" + apiData._embedded.events[i].url + ">Click here</a></p>";
                 }
 
                 htmlString += "<hr>";
 
-
-                document.getElementById("concertData").innerHTML = htmlString; //we add the content to our div with id="concertData" //PROBLEM HERE!
             }
         }
-    }
+    }document.getElementById("concertData").innerHTML = htmlString; //we add the content to our div with id="concertData"
 }
 
 function refreshCities() { //onchange for cities select
