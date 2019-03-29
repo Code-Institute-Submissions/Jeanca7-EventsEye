@@ -50,6 +50,10 @@
                 justify-content: center!important;
         }
         
+        .pic-lay{
+                justify-content: center;
+        }
+        
 }
 
 
@@ -130,3 +134,4 @@ strong{
         font-family: 'Contrail One', cursive;
         color: black;
 }
+

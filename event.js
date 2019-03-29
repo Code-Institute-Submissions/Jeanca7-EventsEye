@@ -172,7 +172,7 @@ function displayNicely(apiData, country, city, genre) {
 
 
                 if (typeof(apiData._embedded.events[i].seatmap) !== "undefined") {
-                    htmlString += "<h3>SEATMAP</h3>" + "<img src = " + apiData._embedded.events[i].seatmap.staticUrl + " class='seat-map'><br />"; //ADD THE IMAGE DEPENDING ON EACH EVENT*******
+                    htmlString += "<h3>SEATMAP</h3><div class='row pic-lay'>" + "<img src = " + apiData._embedded.events[i].seatmap.staticUrl + " class='seat-map'></div>"; //ADD THE IMAGE DEPENDING ON EACH EVENT*******
                 }
 
 
@@ -201,7 +201,7 @@ function displayNicely(apiData, country, city, genre) {
 
                 if (typeof(apiData["_embedded"].events[i]["_embedded"].venues[0].images) !== "undefined") { //we add the venue images***
 
-                    htmlString += "<h3>VENUE: </h3>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img'><br />";
+                    htmlString += "<h3>VENUE: </h3><div class='row pic-lay'>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img'></div>";
                 }
 
 
