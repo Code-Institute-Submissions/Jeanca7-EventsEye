@@ -1,4 +1,4 @@
-![logo_transparent](https://user-images.githubusercontent.com/43143675/55242230-b03bd900-5234-11e9-90c5-93591a324e72.png)
+![logo_transparent](https://user-images.githubusercontent.com/43143675/55260466-6ff25000-5260-11e9-9a4d-ad8ddc7deae6.png)  
 ## EventsEye
 An events website that allows users to search for upcoming shows, attractions and more. 
 
@@ -12,6 +12,7 @@ Once the user selects the country, the city bar is populated and so the genre ba
 Furthermore, when the user selects the country of interest, the events that will take place in such area will be displayed below the background image. Thus, the user have a deeper appreciation for the changes in the events when filtering for each select bar.  
 
 The searched events are displayed with features including but not limted to the following: Event name, type of event, start and end time, sale status, ticket limit information, seatmap, venue address, venue image, parking details, link to purchase tickets, etc.  
+
 Each piece of information including the images are retrieved from the API as strings of text and are put together and presentend on the page in a readable, easy-to-use and slick manner. 
 On big screens the image of the artist is displayed at the center and the seatmap together with the venue image are displayed on the left side. For small screens all images are centered to provide a slicker layout.  
 
@@ -31,10 +32,6 @@ I have used standard code style.
 * HTML5
 * JSON
 * Adobe Comp (To create mockups)  
-
-## Features
-1. Search form to filter upcoming events and attractions. 
-2. Events description(seatmap, artist images, venue features, link to purchase tickets, etc.)
 
 ## Deployment
 EventsEye is hosted on GitHub Pages.  
