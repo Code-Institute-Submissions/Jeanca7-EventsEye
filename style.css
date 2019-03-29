@@ -5,7 +5,7 @@
 }
 
 .back-img{
-        background-image: url(images/concert-background.JPG);
+        background-image: url(images/concert-back.jpg);
         background-size: cover;
         height: 700px;
 }
@@ -134,4 +134,3 @@ strong{
         font-family: 'Contrail One', cursive;
         color: black;
 }
-

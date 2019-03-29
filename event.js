@@ -82,7 +82,6 @@ function populateGenre(apiData) {
     displayNicely(apiData, country, city, genre);
 }
 
-
 // function displayNicely loops through the apiData and only displays for the selected country, city and genre.
 
 function displayNicely(apiData, country, city, genre) {
@@ -201,7 +200,7 @@ function displayNicely(apiData, country, city, genre) {
 
                 if (typeof(apiData["_embedded"].events[i]["_embedded"].venues[0].images) !== "undefined") { //we add the venue images***
 
-                    htmlString += "<h3>VENUE: </h3><div class='row pic-lay'>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img'></div>";
+                    htmlString += "<h3>VENUE: </h3><div class='row pic-lay'>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img rounded'></div>";
                 }
 
 
@@ -276,8 +275,4 @@ request.onreadystatechange = function() { //the answer is here if we request bot
     }
 }
 
-//USE THE LAST REQUEST WHEN CREATING OBTAINGENRE()  HOW CAN I FILTER THE DIV id="concertData" ?
 
-
-// <div id="concertData"></div>
-// onclick="obtainCountry()"
