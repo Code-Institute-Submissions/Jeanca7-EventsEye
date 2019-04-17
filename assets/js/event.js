@@ -217,7 +217,7 @@ function displayNicely(apiData, country, city, genre) {
 
             }
         }
-    }document.getElementById("concertData").innerHTML = htmlString; //we add the content to our div with id="concertData"
+    }document.getElementById("concert-data").innerHTML = htmlString; //we add the content to our div with id="concert-data"
 }
 
 function refreshCities() { //onchange for cities select
@@ -267,10 +267,10 @@ request.onreadystatechange = function() { //the answer is here if we request bot
             populateCity(apiData);
             populateGenre(apiData);
             // displayNicely(apiData); //displayNicely is displayed with the data retrived from the IPA CALL with our request.
-            // document.getElementById("concertData").innerHTML = displayNicely(apiData);
+            // document.getElementById("concert-data").innerHTML = displayNicely(apiData);
         }
         else if (this.status == 404) {
-            document.getElementById("concertData").innerHTML = "<h2>City not found! Please try again</h2>"
+            document.getElementById("concert-data").innerHTML = "<h2>City not found! Please try again</h2>"
         }
     }
 }

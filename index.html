@@ -12,22 +12,22 @@
 </head>
 
 <body>
-  
-      
-<div class="container-fluid back-img">      
-      
-      <div class="container search-form">
-        <div class="row justify-content-center">
-            <img src="images/logo_transparent.png" class="logo img-fluid">
-            <div class="col-xs-7 col-md-12">
-                <form class="form-inline">
-                    
-    <div class="input-group mx-auto my-2">
-    <div class="input-group-prepend">
-    <label class="input-group-text" for="CountrySelect">Please select a country</label>
-    </div>
-        
-    <select id="CountrySelect" onchange="obtainCountry()" class="custom-select">
+
+
+    <div class="container-fluid back-img">
+
+        <div class="container search-form">
+            <div class="row justify-content-center">
+                <img src="images/logo_transparent.png" class="logo img-fluid">
+                <div class="col-xs-7 col-md-12">
+                    <form class="form-inline">
+
+                        <div class="input-group mx-auto my-2">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="CountrySelect">Please select a country</label>
+                            </div>
+
+                            <select id="CountrySelect" onchange="obtainCountry()" class="custom-select">
     <option value="">Choose...</option>
     <option value="US">USA</option>
     <option value="AU">Australia</option>
@@ -47,55 +47,55 @@
     <option value="SE">Sweden</option>
     <option value="CH">Switzerland</option>
 </select>
-</div>
-    
+                        </div>
 
-<div class="input-group mx-auto my-2">
-<div class="input-group-prepend">
-    <label class="input-group-text" for="citySelect">Please select a city</label>
-    </div>
-<select id="citySelect" onchange = "refreshCities()" class="custom-select">
+
+                        <div class="input-group mx-auto my-2">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="citySelect">Please select a city</label>
+                            </div>
+                            <select id="citySelect" onchange="refreshCities()" class="custom-select">
     <option value="">Choose...</option>  
 </select>
-</div>
+                        </div>
 
 
-<div class="input-group mx-auto my-2">
-<div class="input-group-prepend">
-    <label class="input-group-text" for="genreSelect">Please select a genre</label>
-    </div>
-<select id="genreSelect" onchange="refreshGenres()" class="custom-select">
+                        <div class="input-group mx-auto my-2">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="genreSelect">Please select a genre</label>
+                            </div>
+                            <select id="genreSelect" onchange="refreshGenres()" class="custom-select">
     <option value="">Choose...</option>  
 </select>
-</div>
+                        </div>
 
-</form>
+                    </form>
 
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
 
-</div>
+    </div>
 
 
-<div class="container">
-  <div class="row">
-  <div class="col">
+    <div class="container">
+        <div class="row">
+            <div class="col">
 
-<div id="concertData"> 
-</div>
+                <div id="concert-data">
+                </div>
 
-<div class="row justify-content-center quote">
-    <blockquote class="blockquote text-center">
-        <p class="mb-0">"Never, ever understimate the importance of having fun."</p>
-        <footer class="blockquote-footer">Randy Pausch.</footer>
-    </blockquote>
-</div>
-      </div>
-      </div>
-      </div>
- 
- 
+                <div class="row justify-content-center quote">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Never, ever understimate the importance of having fun."</p>
+                        <footer class="blockquote-footer">Randy Pausch.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="event.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
