@@ -5,7 +5,7 @@
 }
 
 .back-img{
-        background-image: url(assets/images/concert-back.jpg);
+        background-image: url('../images/concert-back.jpg');
         background-size: cover;
         height: 700px;
 }
