@@ -1,93 +1,99 @@
-.artist-image{
-        height: 300px;
-        width: 300px;
-        margin-bottom: 1rem;
-}
-
-.back-img{
+.back-img {
         background-image: url('../images/concert-back.jpg');
         background-size: cover;
         height: 700px;
 }
 
-.search-form{
+.search-form {
         position: relative;
         top: 40%;
         transform: translateY(-50%);
 }
 
 
-@media(max-width: 500px){
-        .logo{
+@media(max-width: 500px) {
+        .logo {
                 width: 300px;
                 height: 300px;
         }
-        
-        .quote{
+
+        .quote {
                 margin-top: 70px;
                 margin-bottom: 15px;
         }
-        
-        .blockquote p{
+
+        .blockquote p {
                 font-size: 40px;
         }
 
-        .blockquote-footer{
+        .blockquote-footer {
                 font-size: 30px;
         }
-        
-        .seat-map{
-                width: 300px;
+
+        .seat-map {
+                /*width: 300px;*/
                 height: 300px;
         }
-        
-        .venue-img{
-                width: 300px;
+
+        .venue-img {
+                /*width: 300px;*/
                 height: 300px;
         }
-        
-        .artist-image{
-                justify-content: center!important;
+
+        .artist-image {
+                height: 300px;
+                margin-bottom: 0;
         }
-        
-        .pic-lay{
-                justify-content: center;
+
+        /*.pic-lay {*/
+        /*        justify-content: center;*/
+        /*}*/
+        #concert-data h1 {
+                margin-bottom: 0;
         }
-        
+
 }
 
 
-@media(min-width: 501px){
-        .quote{
+@media(min-width: 501px) {
+        .quote {
                 margin-top: 50px;
                 margin-bottom: 15px;
         }
-        
-        .blockquote p{
-        font-size: 90px;
+
+        .blockquote p {
+                font-size: 90px;
         }
 
-        .blockquote-footer{
+        .blockquote-footer {
                 font-size: 50px;
         }
-        
-        .seat-map{
-                width: 670px;
+
+        .seat-map {
+                /*width: 670px;*/
                 height: 450px;
         }
-        
-        .venue-img{
-                width: 450px;
+
+        .venue-img {
                 height: 450px;
         }
-        
+
+        #concert-data h1 {
+                margin-bottom: 1.5rem;
+        }
+
+        .artist-image {
+                height: 500px;
+                margin-bottom: 1rem;
+        }
+
 }
 
-.quote{
+.quote {
         font-family: 'Kaushan Script', cursive;
 }
 
-body{
+body {
         font-family: 'Overlock', cursive;
 }
 
@@ -102,35 +108,52 @@ body{
         border-radius: .50rem;
 }
 
-h1{
+#concert-data h1 {
         color: #ff1a1a;
-        margin-bottom: 1.5rem;
+        text-align: center;
 }
 
-.seat-map{
+.seat-map {
         margin-bottom: 1rem;
 }
 
-.venue-img{
+.venue-img {
         margin-bottom: 1rem;
 }
 
-#concert-data p{
+#concert-data p {
         font-size: 20px;
-        color: #8c8c8c;
+        color: #4d4d4d;
+        text-align: center;
 }
 
-hr{
+
+#concert-data h3 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        text-align: center;
+}
+
+hr {
         border-width: 3px;
-        border-color: #999999; 
+        border-color: #999999;
         margin-bottom: 3rem;
 }
 
-h4{
+h4 {
         display: inline;
 }
 
-strong{
+strong {
         font-family: 'Contrail One', cursive;
         color: black;
+}
+
+.star {
+        color: #ffd700;
+}
+
+.ticket {
+        color: #008000;
+        font-size: x-large;
 }

@@ -95,12 +95,12 @@ function displayNicely(apiData, country, city, genre) {
         if (apiData._embedded.events[i]._embedded.venues[0].city.name == city) {
             if (apiData._embedded.events[i].classifications[0].segment.name == genre) {
                 if (typeof(apiData._embedded.events[i].name) !== "undefined") {
-                    htmlString += "<h1>" + apiData._embedded.events[i].name + "</h1>";
+                    htmlString += "<h1><i class='fas fa-star star'></i> " + apiData._embedded.events[i].name + "</h1>";
                 }
 
 
                 if (typeof(apiData._embedded.events[i].images) !== "undefined") {
-                    htmlString += "<div class='row justify-content-center'><img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image rounded'> </div>"; //artist image***    
+                    htmlString += "<div class='row justify-content-center'><img src= " + apiData._embedded.events[i].images[0].url + " class='artist-image rounded img-fluid'> </div>"; //artist image***    
                 }
 
 
@@ -171,7 +171,7 @@ function displayNicely(apiData, country, city, genre) {
 
 
                 if (typeof(apiData._embedded.events[i].seatmap) !== "undefined") {
-                    htmlString += "<h3>SEATMAP</h3><div class='row pic-lay'>" + "<img src = " + apiData._embedded.events[i].seatmap.staticUrl + " class='seat-map'></div>"; //ADD THE IMAGE DEPENDING ON EACH EVENT*******
+                    htmlString += "<h3>SEATMAP</h3><div class='row justify-content-center'><img src = " + apiData._embedded.events[i].seatmap.staticUrl + " class='seat-map img-fluid'></div>"; //ADD THE MAP IMAGE DEPENDING ON EACH EVENT*******
                 }
 
 
@@ -200,7 +200,7 @@ function displayNicely(apiData, country, city, genre) {
 
                 if (typeof(apiData["_embedded"].events[i]["_embedded"].venues[0].images) !== "undefined") { //we add the venue images***
 
-                    htmlString += "<h3>VENUE: </h3><div class='row pic-lay'>" + "<img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img rounded'></div>";
+                    htmlString += "<h3>VENUE: </h3><div class='row justify-content-center'><img src =" + apiData._embedded.events[i]._embedded.venues[0].images[0].url + " class='venue-img rounded img-fluid'></div>";
                 }
 
 
@@ -210,7 +210,7 @@ function displayNicely(apiData, country, city, genre) {
 
 
                 if (typeof(apiData._embedded.events[i].url) !== "undefined") {
-                    htmlString += "<p><strong>BUY YOUR TICKETS HERE: </strong>" + "<a href=" + apiData._embedded.events[i].url + ">Click here</a></p>";
+                    htmlString += "<p><i class='fas fa-ticket-alt ticket'></i> <strong>BUY YOUR TICKETS HERE: </strong>" + "<a href=" + apiData._embedded.events[i].url + ">Click here</a></p>";
                 }
 
                 htmlString += "<hr>";
