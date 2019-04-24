@@ -95,7 +95,7 @@ function displayNicely(apiData, country, city, genre) {
         if (apiData._embedded.events[i]._embedded.venues[0].city.name == city) {
             if (apiData._embedded.events[i].classifications[0].segment.name == genre) {
                 if (typeof(apiData._embedded.events[i].name) !== "undefined") {
-                    htmlString += "<h1><i class='fas fa-star star'></i> " + apiData._embedded.events[i].name + "</h1>";
+                    htmlString += "<h2><i class='fas fa-star star'></i> " + apiData._embedded.events[i].name + "</h2>";
                 }
 
 
