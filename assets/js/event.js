@@ -11,7 +11,7 @@ function removeOptions(selectbox) {
 
 //we push the cities where the events are taking place
 function populateCity(apiData) {
-    let select = document.getElementById("citySelect");
+    let select = document.getElementById("city-select");
     if (select.options.length > 0) {
         removeOptions(select);
     }
@@ -27,15 +27,15 @@ function populateCity(apiData) {
             cityArray.push(city);
         }
     }
-    let eleCountry = document.getElementById("CountrySelect");
+    let eleCountry = document.getElementById("country-select");
     let country = eleCountry.options[eleCountry.selectedIndex].value;
 
     //we create our variable city from the selected city in our select
-    let eleCity = document.getElementById("citySelect");
+    let eleCity = document.getElementById("city-select");
     let city = eleCity.options[eleCity.selectedIndex].text;
 
     //we create our variable genre from the selected genre in our select
-    let eleGenre = document.getElementById("genreSelect");
+    let eleGenre = document.getElementById("genre-select");
     let genre = eleGenre.options[eleGenre.selectedIndex].text;
 
     displayNicely(apiData, country, city, genre);
@@ -44,13 +44,13 @@ function populateCity(apiData) {
 
 //we push the genre available for the events are taking place
 function populateGenre(apiData) {
-    let select = document.getElementById("genreSelect");
+    let select = document.getElementById("genre-select");
     if (select.options.length > 0) {
         removeOptions(select);
     }
 
     //we create our variable city from the selected city in our select
-    let eleCity = document.getElementById("citySelect");
+    let eleCity = document.getElementById("city-select");
     let city = eleCity.options[eleCity.selectedIndex].text;
 
     let genreArray = [];
@@ -70,13 +70,13 @@ function populateGenre(apiData) {
         }
     }
 
-    let eleCountry = document.getElementById("CountrySelect");
+    let eleCountry = document.getElementById("country-select");
     let country = eleCountry.options[eleCountry.selectedIndex].value;
 
 
 
     //we create our variable genre from the selected genre in our select
-    let eleGenre = document.getElementById("genreSelect");
+    let eleGenre = document.getElementById("genre-select");
     let genre = eleGenre.options[eleGenre.selectedIndex].text;
 
     displayNicely(apiData, country, city, genre);
@@ -221,30 +221,30 @@ function displayNicely(apiData, country, city, genre) {
 }
 
 function refreshCities() { //onchange for cities select
-    let eleCountry = document.getElementById("CountrySelect");
+    let eleCountry = document.getElementById("country-select");
     let country = eleCountry.options[eleCountry.selectedIndex].value;
 
     //we create our variable city from the selected city in our select
-    let eleCity = document.getElementById("citySelect");
+    let eleCity = document.getElementById("city-select");
     let city = eleCity.options[eleCity.selectedIndex].text;
 
     //we create our variable genre from the selected genre in our select
-    let eleGenre = document.getElementById("genreSelect");
+    let eleGenre = document.getElementById("genre-select");
     let genre = eleGenre.options[eleGenre.selectedIndex].text;
 
     populateGenre(apiData); //this is going to happen when onchange in the cities select
 }
 
 function refreshGenres() { //onchange for genres select
-    let eleCountry = document.getElementById("CountrySelect");
+    let eleCountry = document.getElementById("country-select");
     let country = eleCountry.options[eleCountry.selectedIndex].value;
 
     //we create our variable city from the selected city in our select
-    let eleCity = document.getElementById("citySelect");
+    let eleCity = document.getElementById("city-select");
     let city = eleCity.options[eleCity.selectedIndex].text;
 
     //we create our variable genre from the selected genre in our select
-    let eleGenre = document.getElementById("genreSelect");
+    let eleGenre = document.getElementById("genre-select");
     let genre = eleGenre.options[eleGenre.selectedIndex].text;
 
     displayNicely(apiData, country, city, genre); //this is going to happen when onchange in the genres select
@@ -252,7 +252,7 @@ function refreshGenres() { //onchange for genres select
 
 //what data I want to retrive.......API CALL   OBTAIN OUR DATA
 function obtainCountry() {
-    let countrySelect = document.getElementById("CountrySelect"); //we're getting the select element with id="CountrySelect"
+    let countrySelect = document.getElementById("country-select"); //we're getting the select element with id="country-select"
     let CountryCode = countrySelect.options[countrySelect.selectedIndex].value; //we're getting the value of the option within the select element
     request.open("GET", "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + CountryCode + "&apikey=nScmb5ehJnReWvueGw60fT6GWgXztU1K"); //GET Country
     request.send();
@@ -274,5 +274,4 @@ request.onreadystatechange = function() { //the answer is here if we request bot
         }
     }
 }
-
 

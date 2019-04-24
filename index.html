@@ -8,66 +8,68 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Contrail+One|Kaushan+Script|Overlock" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500,600" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>EventsEye</title>
 </head>
 
 <body>
 
-
+    <!--select form area-->
+    
     <div class="container-fluid back-img">
 
         <div class="container search-form">
             <div class="row justify-content-center">
-                <img src="assets/images/logo_transparent.png" class="logo img-fluid">
+                <img src="assets/images/logo-transparent.png" class="logo img-fluid">   <!--logo image-->
                 <div class="col-xs-7 col-md-12">
-                    <form class="form-inline">
+                    <form class="form-inline"> <!--form-->
 
                         <div class="input-group mx-auto my-2">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="CountrySelect">Please select a country</label>
+                                <label class="input-group-text" for="country-select">Select a country</label>
                             </div>
 
-                            <select id="CountrySelect" onchange="obtainCountry()" class="custom-select">
-    <option value="">Choose...</option>
-    <option value="US">USA</option>
-    <option value="AU">Australia</option>
-    <option value="AT">Austria</option>
-    <option value="BE">Belgium</option>
-    <option value="CA">Canada</option>
-    <option value="DK">Denmark</option>
-    <option value="FI">Finland</option>
-    <option value="DE">Germany</option>
-    <option value="GB">Great Britain</option>
-    <option value="IE">Ireland</option>
-    <option value="MX">Mexico</option>
-    <option value="NL">Netherlands</option>
-    <option value="NZ">New Zealand</option>
-    <option value="NO">Norway</option>
-    <option value="ES">Spain</option>
-    <option value="SE">Sweden</option>
-    <option value="CH">Switzerland</option>
-</select>
+                            <select id="country-select" onchange="obtainCountry()" class="custom-select">
+                        <option value="">Choose...</option>
+                        <option value="US">USA</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="BE">Belgium</option>
+                        <option value="CA">Canada</option>
+                        <option value="DK">Denmark</option>
+                        <option value="FI">Finland</option>
+                        <option value="DE">Germany</option>
+                        <option value="GB">Great Britain</option>
+                        <option value="IE">Ireland</option>
+                        <option value="MX">Mexico</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NO">Norway</option>
+                        <option value="ES">Spain</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                    </select>
                         </div>
 
 
                         <div class="input-group mx-auto my-2">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="citySelect">Please select a city</label>
+                                <label class="input-group-text" for="city-select">Select a city</label>
                             </div>
-                            <select id="citySelect" onchange="refreshCities()" class="custom-select">
-    <option value="">Choose...</option>  
-</select>
+                            <select id="city-select" onchange="refreshCities()" class="custom-select">
+                        <option value="">Choose...</option>  
+                    </select>
                         </div>
 
 
                         <div class="input-group mx-auto my-2">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="genreSelect">Please select a genre</label>
+                                <label class="input-group-text" for="genre-select">Select a genre</label>
                             </div>
-                            <select id="genreSelect" onchange="refreshGenres()" class="custom-select">
-    <option value="">Choose...</option>  
-</select>
+                            <select id="genre-select" onchange="refreshGenres()" class="custom-select">
+                        <option value="">Choose...</option>  
+                    </select>
                         </div>
 
                     </form>
@@ -78,12 +80,12 @@
 
     </div>
 
-
+    <!--searched results data-->
     <div class="container">
         <div class="row">
             <div class="col">
 
-                <div id="concert-data">
+                <div id="concert-data"> <!--data will be displayed here.-->
                 </div>
 
                 <div class="row justify-content-center quote">

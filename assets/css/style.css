@@ -1,15 +1,20 @@
+/*background image*/
+
 .back-img {
-        background-image: url('../images/concert-back.jpg');
+        background-image: url('../images/pink-back.jpg');
         background-size: cover;
         height: 700px;
 }
 
+/*search form positioning*/
 .search-form {
         position: relative;
         top: 40%;
         transform: translateY(-50%);
 }
 
+
+/*small screen*/
 
 @media(max-width: 500px) {
         .logo {
@@ -54,6 +59,7 @@
 
 }
 
+/*bigger screen*/
 
 @media(min-width: 501px) {
         .quote {
@@ -97,21 +103,33 @@ body {
         font-family: 'Overlock', cursive;
 }
 
+
+/*form*/
+
 .input-group-text {
-        background-color: #ff1a1a;
-        border: 1px solid #ced4da;
-        border-radius: .50rem;
+        background-color: #18bfef !important;
+        /*border: 1px solid #ced4da;*/
+        /*border-radius: .50rem;*/
         color: white;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 0.075em;
+        border: none;
 }
 
 .custom-select {
-        border-radius: .50rem;
+        /*border-radius: .50rem;*/
+        font-family: 'Oswald', sans-serif;
+        border: 1px solid #18bfef;
 }
 
 #concert-data h1 {
         color: #ff1a1a;
         text-align: center;
 }
+
+
+/*seat-map and venue image*/
 
 .seat-map {
         margin-bottom: 1rem;
@@ -120,6 +138,9 @@ body {
 .venue-img {
         margin-bottom: 1rem;
 }
+
+
+/*concert information*/
 
 #concert-data p {
         font-size: 20px;
