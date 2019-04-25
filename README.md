@@ -17,10 +17,17 @@ To facilitate the navigation through the site as well as the information provide
 Once the user selects the country, the city bar is populated and so the genre bar. 
 Furthermore, when the user selects the country of interest, the events that will take place in such area will be displayed below the background image. Thus, the user have a deeper appreciation for the changes in the events when filtering for each select bar.  
 
-The searched events are displayed with features including but not limted to the following: Event name, type of event, start and end time, sale status, ticket limit information, seatmap, venue address, venue image, parking details, link to purchase tickets, etc.  
+## Features   
+### Existing Features   
+1. Form section - Allows users to select country, city and event type. The city and event type fiels are populated based on the upcoming events taking place in the selected country.  
+2. The searched events are displayed with features including but not limted to the following: Event name, type of event, start and end time, sale status, ticket limit information, seatmap, venue address, venue image, parking details, ticket price, link to purchase tickets, etc.  
+3. The event name is displayed on top of each section with an animated star on its left which is spinning to attract the attention of the user indicating the existance of an event.  
+4. The artist image, seatmap and venue image - To provide a complete experience. The resolution of some images may be distorted as the result of small size images provided from the API data.  
+5. Each piece of information including the images are retrieved from the API as strings of text and are put together and presentend on the page in a readable, easy-to-use and slick manner.  
+6. Please note that the information provided on each event may differ from one another as this depends on the available data from the API provider.  
 
-Each piece of information including the images are retrieved from the API as strings of text and are put together and presentend on the page in a readable, easy-to-use and slick manner. 
-On big screens the image of the artist is displayed at the center and the seatmap together with the venue image are displayed on the left side. For small screens all images are centered to provide a slicker layout.  
+### Features left to implement  
+EventsEye currently displays the vanue address, however, the Google Maps feature added to the site will facilitate the users to find the location.  
 
 ## Mockups
 * [mobile-wireframes.pdf](https://github.com/Jeanca7/EventsEye/files/3113249/mobile-wireframes.pdf)  
@@ -37,8 +44,23 @@ On big screens the image of the artist is displayed at the center and the seatma
 * Adobe Comp (To create mockups)  
 
 ## Deployment
-EventsEye is hosted on GitHub Pages.  
-(https://jeanca7.github.io/EventsEye/)
+EventsEye is hosted on GitHub Pages. You can see the deployed website [here](https://jeanca7.github.io/EventsEye/).  
+The steps taken in order to deploy the site are as follows:  
+1. Created a repository on GitHub.  
+2. Typed the following comamnd in the console `git remote add origin https://github.com/Jeanca7/EventsEye.git` to add the code from the development environment to the remote version stored on GitHub.  
+3. Entered in console `git push -u origin master`.  
+
+Once changes are made in the development environment, we can save and update the remote version on GitHub by following these steps:  
+1. In console `git add .`.
+2. `git commit -m "MESSAGE GOES HERE"`.  
+3. `git push`.  
+
+To deploy site:
+1. Head to repository on GitHub.  
+2. Go to settings.  
+3. Head to the GitHub Pages Section.  
+4. Select the master branch source.  
+5. Enter custom domain (Not required).  
 
 ## Tests
 Testing was executed manually to ensure the website's responsiveness and funcionality work correctly.   
