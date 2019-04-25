@@ -45,7 +45,7 @@ EventsEye currently displays the vanue address, however, the Google Maps feature
 
 ## Deployment
 EventsEye is hosted on GitHub Pages. You can see the deployed website [here](https://jeanca7.github.io/EventsEye/).  
-The steps taken in order to deploy the site are as follows:  
+The steps taken in order to upload and deploy the site are as follows:  
 1. Created a repository on GitHub.  
 2. Typed the following comamnd in the console `git remote add origin https://github.com/Jeanca7/EventsEye.git` to add the code from the development environment to the remote version stored on GitHub.  
 3. Entered in console `git push -u origin master`.  
@@ -56,7 +56,7 @@ Once changes are made in the development environment, we can save and update the
 3. `git push`.  
 
 To deploy site:
-1. Head to repository on GitHub.  
+1. Head to the repository on GitHub.  
 2. Go to settings.  
 3. Head to the GitHub Pages Section.  
 4. Select the master branch source.  
