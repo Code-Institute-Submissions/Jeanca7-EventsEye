@@ -7,6 +7,7 @@
 }
 
 /*search form positioning*/
+
 .search-form {
         position: relative;
         top: 40%;
@@ -14,11 +15,9 @@
 }
 
 
-/*#concert-data{*/
-/*        background-color: rgba(255,255,255,0.7);*/
-        /*background-image: url(../images/geometry.png)*/
-/*}*/
-
+.blockquote-footer {
+        color: #404040;
+}
 
 /*small screen*/
 
@@ -26,11 +25,6 @@
         .logo {
                 width: 300px;
                 height: 300px;
-        }
-
-        .quote {
-                margin-top: 70px;
-                margin-bottom: 15px;
         }
 
         .blockquote p {
@@ -53,16 +47,12 @@
 
         .artist-image {
                 height: 300px;
-                margin-bottom: 0;
+                margin-bottom: 7px;
         }
 
-        /*.pic-lay {*/
-        /*        justify-content: center;*/
-        /*}*/
         #concert-data h2 {
-                margin-bottom: 0;
+                margin-bottom: 10px;
         }
-
 }
 
 /*bigger screen*/
@@ -98,10 +88,19 @@
                 height: 500px;
                 margin-bottom: 1rem;
         }
-        
-        
-        #concert-data p{
+
+
+        #concert-data p {
                 text-align: center;
+        }
+
+        /*body background image*/
+        body {
+                background-image: url(../images/cloudy-day.png);
+        }
+
+        .data-content {
+                background-color: white;
         }
 }
 
@@ -111,20 +110,9 @@
 
 body {
         font-family: 'Overlock', cursive;
-        background-image: url(../images/cloudy-day.png);
+        /*background-image: url(../images/cloudy-day.png);*/
         /*filter: opacity(60%);*/
 }
-
-/*body::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    background-image: url(../images/full-bloom.png);*/
-/*    padding: 0;*/
-/*    filter: opacity(60%);*/
-/*}*/
 
 
 /*form*/
@@ -207,11 +195,27 @@ strong {
 /*star rotating animation*/
 
 .star {
-    position: relative;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+        position: relative;
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes spin {
+        100% {
+                -moz-transform: rotate(360deg);
+        }
+}
+
+@-webkit-keyframes spin {
+        100% {
+                -webkit-transform: rotate(360deg);
+        }
+}
+
+@keyframes spin {
+        100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+        }
+}

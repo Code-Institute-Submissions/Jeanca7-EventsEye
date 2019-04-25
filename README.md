@@ -41,7 +41,7 @@ EventsEye currently displays the vanue address, however, the Google Maps feature
 * CSS3
 * HTML5
 * JSON
-* Adobe Comp (To create mockups)  
+* Adobe Comp (To create wireframes)  
 
 ## Deployment
 EventsEye is hosted on GitHub Pages. You can see the deployed website [here](https://jeanca7.github.io/EventsEye/).  
@@ -80,7 +80,8 @@ EventsEye: (https://jeanca7.github.io/EventsEye/)
 
 ## Credits
  Ticketmaster developer doccumentation (https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)  
- Why You Need More Fun in Your Life, According to Science article. Author: Michael Rucker. December 2016.   
+ Keyframe animation syntax (https://css-tricks.com/snippets/css/keyframe-animation-syntax/)  
+ Why You Need More Fun in Your Life, According to Science article. Author: Michael Rucker. December 2016.  
  
 ### Media
 * Background image obtained from unsplash.com
